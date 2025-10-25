@@ -1,0 +1,392 @@
+/**
+ * Festival Banner Admin Styles
+ *
+ * @package Festival_Banner
+ * @since   1.0.0
+ */
+
+/* ==========================================================================
+   Meta Box Styles
+   ========================================================================== */
+
+.festival-banner-meta-box {
+	padding: 15px 0;
+}
+
+.festival-banner-meta-box p.description {
+	margin-top: 5px;
+	font-style: italic;
+	color: #646970;
+}
+
+.festival-banner-meta-box strong {
+	color: #1d2327;
+}
+
+/* Form Table Improvements */
+.festival-banner-meta-box .form-table {
+	margin-top: 0;
+}
+
+.festival-banner-meta-box .form-table th {
+	padding-left: 0;
+	padding-right: 10px;
+	width: 30%;
+	vertical-align: top;
+	padding-top: 15px;
+}
+
+.festival-banner-meta-box .form-table td {
+	padding-top: 15px;
+}
+
+/* Input Styling */
+.festival-banner-meta-box input[type="text"],
+.festival-banner-meta-box input[type="url"],
+.festival-banner-meta-box input[type="date"],
+.festival-banner-meta-box input[type="time"],
+.festival-banner-meta-box input[type="number"],
+.festival-banner-meta-box select,
+.festival-banner-meta-box textarea {
+	box-sizing: border-box;
+}
+
+.festival-banner-meta-box input[type="text"].regular-text {
+	width: 100%;
+}
+
+/* ==========================================================================
+   Display Settings (Position Radio Buttons)
+   ========================================================================== */
+
+.festival-banner-meta-box label {
+	cursor: pointer;
+}
+
+.festival-banner-meta-box input[type="radio"],
+.festival-banner-meta-box input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+/* Radio button labels */
+.festival-banner-meta-box p label {
+	display: inline-flex;
+	align-items: center;
+}
+
+/* Conditional fields styling */
+.fb-conditional-field {
+	margin-top: 15px;
+	padding-top: 15px;
+	border-top: 1px solid #ddd;
+}
+
+/* ==========================================================================
+   Specific Pages Checkbox List
+   ========================================================================== */
+
+.fb-specific-pages-field .pages-checkbox-list {
+	max-height: 200px;
+	overflow-y: auto;
+	margin-top: 10px;
+	border: 1px solid #ddd;
+	padding: 10px;
+	background: white;
+	border-radius: 3px;
+}
+
+.fb-specific-pages-field .pages-checkbox-list label {
+	display: block;
+	margin-bottom: 5px;
+	padding: 3px 0;
+}
+
+.fb-specific-pages-field .pages-checkbox-list label:hover {
+	background-color: #f0f0f1;
+}
+
+/* ==========================================================================
+   Color Picker Fields
+   ========================================================================== */
+
+.fb-color-picker {
+	max-width: 100px;
+}
+
+.wp-picker-container {
+	display: block;
+	margin-top: 5px;
+}
+
+.wp-picker-container .wp-color-result {
+	height: 32px;
+}
+
+/* ==========================================================================
+   Schedule Fields
+   ========================================================================== */
+
+#fb-schedule-fields {
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+.festival-banner-meta-box input[type="date"],
+.festival-banner-meta-box input[type="time"] {
+	width: 100%;
+	padding: 6px 8px;
+	font-size: 14px;
+}
+
+/* Timezone info box */
+.festival-banner-meta-box .timezone-info {
+	margin-top: 15px;
+	padding: 10px;
+	background: #f0f0f1;
+	border-left: 3px solid #2271b1;
+	font-size: 13px;
+}
+
+/* ==========================================================================
+   Animation Preview (Future Enhancement)
+   ========================================================================== */
+
+.fb-animation-preview {
+	margin-top: 15px;
+	padding: 15px;
+	background: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	text-align: center;
+}
+
+/* ==========================================================================
+   List Table Custom Columns
+   ========================================================================== */
+
+/* Position column icons */
+.column-position {
+	white-space: nowrap;
+}
+
+/* Status badges */
+.column-status span {
+	display: inline-block;
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 600;
+	color: white;
+}
+
+/* Display column icons */
+.column-display {
+	white-space: nowrap;
+}
+
+/* Schedule column */
+.column-schedule {
+	font-size: 13px;
+	line-height: 1.6;
+}
+
+/* Dismissible column */
+.column-dismissible {
+	text-align: center;
+}
+
+.column-dismissible span {
+	font-size: 18px;
+}
+
+/* ==========================================================================
+   Admin Notices
+   ========================================================================== */
+
+.notice.festival-banner-notice {
+	position: relative;
+	padding: 12px 15px;
+}
+
+.notice.festival-banner-notice p {
+	margin: 0.5em 0;
+}
+
+.notice.festival-banner-notice a {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.notice.festival-banner-notice a:hover {
+	text-decoration: underline;
+}
+
+/* ==========================================================================
+   Bulk Actions Feedback
+   ========================================================================== */
+
+.notice-success.festival-banner-success {
+	border-left-color: #00a32a;
+}
+
+.notice-warning.festival-banner-warning {
+	border-left-color: #dba617;
+}
+
+.notice-info.festival-banner-info {
+	border-left-color: #2271b1;
+}
+
+/* ==========================================================================
+   Helper Text & Info Boxes
+   ========================================================================== */
+
+.festival-banner-info-box {
+	margin-top: 15px;
+	padding: 10px 15px;
+	background: #e0f2ff;
+	border-left: 3px solid #0073aa;
+	border-radius: 3px;
+}
+
+.festival-banner-info-box strong {
+	color: #0073aa;
+}
+
+.festival-banner-warning-box {
+	margin-top: 15px;
+	padding: 10px 15px;
+	background: #fff8e5;
+	border-left: 3px solid #dba617;
+	border-radius: 3px;
+}
+
+.festival-banner-warning-box strong {
+	color: #dba617;
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+
+@media screen and (max-width: 782px) {
+	.festival-banner-meta-box .form-table th,
+	.festival-banner-meta-box .form-table td {
+		display: block;
+		width: 100%;
+		padding: 10px 0;
+	}
+
+	.festival-banner-meta-box .form-table th {
+		padding-bottom: 5px;
+	}
+
+	.fb-color-picker {
+		max-width: 100%;
+	}
+}
+
+/* ==========================================================================
+   Metabox Accordion State
+   ========================================================================== */
+
+.postbox .inside {
+	margin: 0;
+	padding: 0 12px 12px;
+}
+
+.postbox .festival-banner-meta-box {
+	padding: 15px 0;
+}
+
+/* ==========================================================================
+   Loading States
+   ========================================================================== */
+
+.festival-banner-loading {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.festival-banner-loading::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin: -10px 0 0 -10px;
+	border: 2px solid #2271b1;
+	border-radius: 50%;
+	border-top-color: transparent;
+	animation: festival-banner-spin 0.6s linear infinite;
+}
+
+@keyframes festival-banner-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* ==========================================================================
+   Validation States
+   ========================================================================== */
+
+.festival-banner-error {
+	border-color: #d63638 !important;
+	box-shadow: 0 0 0 1px #d63638;
+}
+
+.festival-banner-error-message {
+	color: #d63638;
+	font-size: 13px;
+	margin-top: 5px;
+	display: block;
+}
+
+.festival-banner-success {
+	border-color: #00a32a !important;
+	box-shadow: 0 0 0 1px #00a32a;
+}
+
+/* ==========================================================================
+   Filter Dropdowns in List Table
+   ========================================================================== */
+
+.tablenav .actions select {
+	margin-right: 5px;
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+.fb-hidden {
+	display: none !important;
+}
+
+.fb-disabled {
+	opacity: 0.5;
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
+.fb-text-muted {
+	color: #646970;
+}
+
+.fb-text-success {
+	color: #00a32a;
+}
+
+.fb-text-error {
+	color: #d63638;
+}
+
+.fb-text-warning {
+	color: #dba617;
+}
+
+.fb-text-info {
+	color: #2271b1;
+}
