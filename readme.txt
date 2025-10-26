@@ -64,6 +64,8 @@ Absolutely. You can set start and end dates for any banner.
 1. Example of a banner displayed on the top of a website.
 2. Example of a banner displayed on the bottom of a website.
 3. Example of a banner displayed as a popup.
+4. All banners displayed.
+5. Banner list pannel.
 
 == Changelog ==
 
