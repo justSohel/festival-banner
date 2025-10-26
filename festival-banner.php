@@ -8,7 +8,7 @@
  * @license           GPL-2.0-or-later
  *
  * @wordpress-plugin
- * Plugin Name:       Festival Banner (DEV)
+ * Plugin Name:       Festival Banner (DEV Claude)
  * Plugin URI:        https://example.com/festival-banner
  * Description:       Create eye-catching festival banners for e-commerce sales campaigns with multiple positions and advanced scheduling.
  * Version:           1.0.0
@@ -79,6 +79,11 @@ register_deactivation_hook( __FILE__, 'deactivate_festival_banner' );
  * admin-specific hooks, and public-facing site hooks.
  */
 require FESTIVAL_BANNER_PLUGIN_DIR . 'includes/class-festival-banner.php';
+
+/**
+ * The class responsible for banner database queries.
+ */
+require_once FESTIVAL_BANNER_PLUGIN_DIR . 'includes/class-festival-banner-query.php';
 
 /**
  * Begins execution of the plugin.

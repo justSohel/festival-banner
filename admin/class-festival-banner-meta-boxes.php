@@ -202,8 +202,8 @@ class Festival_Banner_Meta_Boxes {
 		// Save behavior.
 		$this->save_behavior_fields( $post_id );
 
-		// Clear cache after saving.
-		delete_transient( 'festival_banner_active_banners' );
+		// Clear ALL banner caches after saving.
+		Festival_Banner_Query::clear_all_caches();
 	}
 
 	/**

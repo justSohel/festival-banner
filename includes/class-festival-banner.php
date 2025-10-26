@@ -87,6 +87,7 @@ class Festival_Banner {
 	 *
 	 * - Festival_Banner_Loader. Orchestrates the hooks of the plugin.
 	 * - Festival_Banner_i18n. Defines internationalization functionality.
+	 * - Festival_Banner_Query. Handles banner database queries.
 	 * - Festival_Banner_Admin. Defines all hooks for the admin area.
 	 * - Festival_Banner_Public. Defines all hooks for the public side of the site.
 	 *
@@ -108,6 +109,11 @@ class Festival_Banner {
 		 * of the plugin.
 		 */
 		require_once FESTIVAL_BANNER_PLUGIN_DIR . 'includes/class-festival-banner-i18n.php';
+
+		/**
+		 * The class responsible for banner database queries.
+		 */
+		require_once FESTIVAL_BANNER_PLUGIN_DIR . 'includes/class-festival-banner-query.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.

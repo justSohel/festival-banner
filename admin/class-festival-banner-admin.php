@@ -52,7 +52,14 @@ class Festival_Banner_Admin {
 
 		// Initialize list table customization.
 		$this->init_list_table();
+
+		// Initialize meta boxes.
 		$this->init_meta_boxes();
+
+		// Clear cache on banner trash/delete.
+		add_action( 'trashed_post', array( $this, 'clear_cache_on_delete' ) );
+		add_action( 'deleted_post', array( $this, 'clear_cache_on_delete' ) );
+		add_action( 'untrashed_post', array( $this, 'clear_cache_on_delete' ) );
 	}
 
 	/**
@@ -150,13 +157,6 @@ class Festival_Banner_Admin {
 		return false;
 	}
 
-	protected function getMenuIcon(): string
-    {
-		$svg = '<svg fill="#cdcdcd" width="800px" height="800px" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg"><path d="M2,4.88A2.88,2.88,0,0,1,4.88,2H47.12A2.88,2.88,0,0,1,50,4.88V47.12A2.88,2.88,0,0,1,47.12,50H4.88A2.88,2.88,0,0,1,2,47.12ZM9.2,22.16a2.39,2.39,0,0,1,2.4-2.4H39.44a2.4,2.4,0,1,1,0,4.8H11.6A2.39,2.39,0,0,1,9.2,22.16Zm8.16,5.28a2.4,2.4,0,1,0,0,4.8H33.68a2.4,2.4,0,0,0,0-4.8Z" fill-rule="evenodd"/></svg>';
-
-        return 'data:image/svg+xml;base64,' . base64_encode($svg);
-    }
-
 	/**
 	 * Register the custom post type.
 	 *
@@ -203,8 +203,7 @@ class Festival_Banner_Admin {
 			'show_ui'             => true,
 			'show_in_menu'        => true,
 			'menu_position'       => 28,
-			// 'menu_icon'           => 'dashicons-megaphone',
-			'menu_icon'           => $this->getMenuIcon(),
+			'menu_icon'           => 'dashicons-megaphone',
 			'show_in_admin_bar'   => true,
 			'show_in_nav_menus'   => false,
 			'can_export'          => true,
@@ -538,5 +537,21 @@ class Festival_Banner_Admin {
 		}
 
 		return $new_post_id;
+	}
+
+	/**
+	 * Clear cache when banner is trashed, deleted, or restored.
+	 *
+	 * @since 1.0.0
+	 * @param int $post_id The post ID.
+	 */
+	public function clear_cache_on_delete( $post_id ) {
+		// Check if it's a festival banner.
+		if ( 'festival_banner' !== get_post_type( $post_id ) ) {
+			return;
+		}
+
+		// Clear all banner caches.
+		Festival_Banner_Query::clear_all_caches();
 	}
 }

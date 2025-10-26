@@ -1,0 +1,588 @@
+/**
+ * Festival Banner Public Styles
+ *
+ * @package Festival_Banner
+ * @since   1.0.0
+ */
+
+/* ==========================================================================
+   Base Banner Styles
+   ========================================================================== */
+
+.fb-banner {
+	position: relative;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	line-height: 1.6;
+	z-index: 9999;
+}
+
+.fb-banner * {
+	box-sizing: border-box;
+}
+
+.fb-banner__container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 15px 20px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.fb-banner__content {
+	flex: 1;
+	min-width: 200px;
+}
+
+.fb-banner__content p {
+	margin: 0 0 10px;
+}
+
+.fb-banner__content p:last-child {
+	margin-bottom: 0;
+}
+
+.fb-banner__content h1,
+.fb-banner__content h2,
+.fb-banner__content h3 {
+	margin: 0 0 10px;
+	line-height: 1.3;
+}
+
+/* ==========================================================================
+   CTA Button
+   ========================================================================== */
+
+.fb-banner__cta {
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-weight: 600;
+	border-radius: 4px;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+	white-space: nowrap;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.fb-banner__cta:hover {
+	transform: translateY(-2px);
+	opacity: 0.9;
+	text-decoration: none;
+}
+
+.fb-banner__cta:active {
+	transform: translateY(0);
+}
+
+/* ==========================================================================
+   Dismiss Button
+   ========================================================================== */
+
+.fb-banner__dismiss,
+.fb-banner__close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: rgba(0, 0, 0, 0.3);
+	border: none;
+	color: white;
+	font-size: 24px;
+	line-height: 1;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.2s ease;
+	z-index: 10;
+}
+
+.fb-banner__dismiss:hover,
+.fb-banner__close:hover {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.fb-banner__dismiss span,
+.fb-banner__close span {
+	display: block;
+	line-height: 1;
+}
+
+/* ==========================================================================
+   Top Bar Position
+   ========================================================================== */
+
+.fb-banner--top-bar {
+	position: static;
+	width: 100%;
+	left: 0;
+	top: 0;
+	transition: all 0.3s ease;
+}
+
+.fb-banner--top-bar.fb-sticky {
+	position: fixed;
+	top: 0;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+/* ==========================================================================
+   Bottom Bar Position
+   ========================================================================== */
+
+.fb-banner--bottom-bar {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	z-index: 9998;
+	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fb-banner--bottom-bar.fb-push-content {
+	position: relative;
+}
+
+/* ==========================================================================
+   Floating Position
+   ========================================================================== */
+
+.fb-banner--floating {
+	position: fixed;
+	max-width: 350px;
+	border-radius: 8px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+	z-index: 9997;
+	padding: 15px;
+}
+
+.fb-banner--floating .fb-banner__container {
+	padding: 0;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.fb-banner--floating .fb-banner__content {
+	min-width: auto;
+	font-size: 14px;
+}
+
+.fb-banner--floating .fb-banner__cta {
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+/* Floating positions */
+.fb-banner--floating-top-left {
+	top: 20px;
+	left: 20px;
+}
+
+.fb-banner--floating-top-right {
+	top: 20px;
+	right: 20px;
+}
+
+.fb-banner--floating-bottom-left {
+	bottom: 20px;
+	left: 20px;
+}
+
+.fb-banner--floating-bottom-right {
+	bottom: 20px;
+	right: 20px;
+}
+
+/* ==========================================================================
+   Modal Position
+   ========================================================================== */
+
+.fb-modal-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 10000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.fb-banner--modal {
+	position: relative;
+	max-width: 600px;
+	max-height: 80vh;
+	overflow-y: auto;
+	border-radius: 8px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+	animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+	from {
+		transform: scale(0.9);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.fb-banner--modal .fb-banner__container {
+	padding: 30px;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.fb-banner--modal .fb-banner__content {
+	min-width: auto;
+	text-align: center;
+}
+
+.fb-banner--modal .fb-banner__cta {
+	width: 100%;
+	text-align: center;
+	margin-top: 15px;
+	padding: 12px 24px;
+	font-size: 16px;
+}
+
+.fb-banner--modal .fb-banner__close {
+	top: 15px;
+	right: 15px;
+	width: 35px;
+	height: 35px;
+	font-size: 28px;
+}
+
+/* ==========================================================================
+   Side Banner Position
+   ========================================================================== */
+
+.fb-banner--side {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 120px;
+	max-height: 80vh;
+	overflow-y: auto;
+	border-radius: 8px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+	z-index: 9996;
+	padding: 15px 10px;
+}
+
+.fb-banner--side .fb-banner__content {
+	font-size: 13px;
+	text-align: center;
+	min-width: auto;
+}
+
+.fb-banner--side .fb-banner__cta {
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	padding: 8px 12px;
+	font-size: 12px;
+}
+
+.fb-banner--side-left {
+	left: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.fb-banner--side-right {
+	right: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+/* Fade Animation */
+.fb-banner--fade {
+	animation: bannerFadeIn 0.5s ease;
+}
+
+@keyframes bannerFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Slide Animation */
+.fb-banner--slide.fb-banner--top-bar {
+	animation: slideInFromTop 0.5s ease;
+}
+
+.fb-banner--slide.fb-banner--bottom-bar {
+	animation: slideInFromBottom 0.5s ease;
+}
+
+.fb-banner--slide.fb-banner--side-left {
+	animation: slideInFromLeft 0.5s ease;
+}
+
+.fb-banner--slide.fb-banner--side-right {
+	animation: slideInFromRight 0.5s ease;
+}
+
+.fb-banner--slide.fb-banner--floating {
+	animation: slideInScale 0.5s ease;
+}
+
+@keyframes slideInFromTop {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideInFromBottom {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideInFromLeft {
+	from {
+		transform: translate(-100%, -50%);
+	}
+	to {
+		transform: translate(0, -50%);
+	}
+}
+
+@keyframes slideInFromRight {
+	from {
+		transform: translate(100%, -50%);
+	}
+	to {
+		transform: translate(0, -50%);
+	}
+}
+
+@keyframes slideInScale {
+	from {
+		transform: scale(0.8);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+/* ==========================================================================
+   Dismiss Transition
+   ========================================================================== */
+
+.fb-banner--dismissing {
+	animation: bannerFadeOut 0.3s ease forwards;
+}
+
+@keyframes bannerFadeOut {
+	to {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+/* Tablet (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+	.fb-banner--side {
+		width: 100px;
+		padding: 12px 8px;
+	}
+
+	.fb-banner--side .fb-banner__content {
+		font-size: 12px;
+	}
+
+	.fb-banner--floating {
+		max-width: 300px;
+	}
+}
+
+/* Mobile (< 768px) */
+@media screen and (max-width: 768px) {
+	.fb-banner__container {
+		padding: 12px 15px;
+		gap: 15px;
+	}
+
+	.fb-banner--top-bar .fb-banner__container,
+	.fb-banner--bottom-bar .fb-banner__container {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.fb-banner__content {
+		font-size: 14px;
+		min-width: auto;
+	}
+
+	.fb-banner__cta {
+		width: 100%;
+		text-align: center;
+	}
+
+	.fb-banner__dismiss,
+	.fb-banner__close {
+		width: 28px;
+		height: 28px;
+		font-size: 20px;
+	}
+
+	/* Floating banners - full width on mobile */
+	.fb-banner--floating {
+		left: 10px !important;
+		right: 10px !important;
+		max-width: calc(100% - 20px);
+		bottom: 10px !important;
+		top: auto !important;
+	}
+
+	.fb-banner--floating-top-left,
+	.fb-banner--floating-top-right {
+		top: 10px !important;
+		bottom: auto !important;
+	}
+
+	/* Hide side banners on mobile */
+	.fb-banner--side {
+		display: none;
+	}
+
+	/* Modal adjustments */
+	.fb-banner--modal {
+		max-width: 90%;
+		max-height: 70vh;
+	}
+
+	.fb-banner--modal .fb-banner__container {
+		padding: 20px;
+	}
+}
+
+/* Small mobile (< 480px) */
+@media screen and (max-width: 480px) {
+	.fb-banner__container {
+		padding: 10px 12px;
+		gap: 10px;
+	}
+
+	.fb-banner__content {
+		font-size: 13px;
+	}
+
+	.fb-banner__content h1,
+	.fb-banner__content h2 {
+		font-size: 18px;
+	}
+
+	.fb-banner__content h3 {
+		font-size: 16px;
+	}
+
+	.fb-banner__cta {
+		padding: 8px 16px;
+		font-size: 13px;
+	}
+
+	.fb-banner--modal .fb-banner__container {
+		padding: 15px;
+	}
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+
+/* Focus states */
+.fb-banner__cta:focus,
+.fb-banner__dismiss:focus,
+.fb-banner__close:focus {
+	outline: 2px solid #0073aa;
+	outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+	.fb-banner,
+	.fb-banner *,
+	.fb-modal-backdrop {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+	.fb-banner {
+		border: 2px solid currentColor;
+	}
+
+	.fb-banner__dismiss,
+	.fb-banner__close {
+		border: 2px solid currentColor;
+	}
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+	.fb-banner,
+	.fb-modal-backdrop {
+		display: none !important;
+	}
+}
