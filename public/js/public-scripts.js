@@ -124,7 +124,7 @@
 				}
 
 				// If top bar, remove body margin
-				if (banner.classList.contains('fb-banner--top-bar')) {
+				if (banner.classList.contains('fb-banner--top_bar')) {
 					document.body.style.marginTop = '0';
 				}
 
@@ -151,40 +151,43 @@
 		 * Initialize top bar sticky behavior
 		 */
 		initTopBarSticky: function() {
-			const topBanners = document.querySelectorAll('.fb-banner--top-bar');
+			const topBanners = document.querySelectorAll('.fb-banner--top_bar');
+
+            console.log(topBanners)
 			
 			if (topBanners.length === 0) {
 				return;
 			}
 
 			topBanners.forEach(banner => {
-				// Get initial position
-				const initialTop = banner.offsetTop;
-				const bannerHeight = banner.offsetHeight;
+				// Wait for banner to be fully rendered
+				setTimeout(() => {
+					const bannerHeight = banner.offsetHeight;
 
-				// Add margin to body to prevent content jump
-				if (!banner.classList.contains('fb-sticky')) {
-					document.body.style.marginTop = bannerHeight + 'px';
-				}
-
-				// Scroll handler
-				const handleScroll = () => {
-					const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-					if (scrollTop > this.scrollThreshold) {
-						if (!banner.classList.contains('fb-sticky')) {
-							banner.classList.add('fb-sticky');
-						}
-					} else {
-						banner.classList.remove('fb-sticky');
+					// Add margin to body to prevent content jump
+					if (!banner.classList.contains('fb-sticky')) {
+						document.body.style.marginTop = bannerHeight + 'px';
 					}
-				};
 
-				// Listen to scroll
-				window.addEventListener('scroll', handleScroll, { passive: true });
-				
-				// Initial check
-				handleScroll();
+					// Scroll handler
+					const handleScroll = () => {
+						const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+						if (scrollTop > this.scrollThreshold) {
+							if (!banner.classList.contains('fb-sticky')) {
+								banner.classList.add('fb-sticky');
+							}
+						} else {
+							banner.classList.remove('fb-sticky');
+						}
+					};
+
+					// Listen to scroll
+					window.addEventListener('scroll', handleScroll, { passive: true });
+					
+					// Initial check
+					handleScroll();
+				}, 100);
 			});
 		},
 

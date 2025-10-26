@@ -5,7 +5,6 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       https://example.com
  * @since      1.0.0
  *
  * @package    Festival_Banner
@@ -24,7 +23,7 @@
  * @since      1.0.0
  * @package    Festival_Banner
  * @subpackage Festival_Banner/includes
- * @author     Your Name <email@example.com>
+ * @author     justSohel <thesohelrana.me@gmail.com>
  */
 class Festival_Banner {
 
@@ -141,7 +140,7 @@ class Festival_Banner {
 	private function set_locale() {
 		$plugin_i18n = new Festival_Banner_i18n();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
+		// $this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 	}
 
 	/**

@@ -2,7 +2,6 @@
 /**
  * Fired during plugin deactivation
  *
- * @link       https://example.com
  * @since      1.0.0
  *
  * @package    Festival_Banner
@@ -17,7 +16,7 @@
  * @since      1.0.0
  * @package    Festival_Banner
  * @subpackage Festival_Banner/includes
- * @author     Your Name <email@example.com>
+ * @author     justSohel <thesohelrana.me@gmail.com>
  */
 class Festival_Banner_Deactivator {
 

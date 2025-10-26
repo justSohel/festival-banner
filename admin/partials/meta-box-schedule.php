@@ -22,13 +22,13 @@ $recurring_year = get_post_meta( $post->ID, '_fb_recurring_year', true );
 $enable_schedule = ! empty( $start_date ) || ! empty( $end_date );
 
 // Default recurring year to current year.
-$recurring_year = $recurring_year ? $recurring_year : (int) date( 'Y' );
+$recurring_year = $recurring_year ? $recurring_year : (int) gmdate( 'Y' );
 
 // Format dates for display.
-$start_date_value = $start_date ? date( 'Y-m-d', strtotime( $start_date ) ) : '';
-$start_time_value = $start_date ? date( 'H:i', strtotime( $start_date ) ) : '00:00';
-$end_date_value   = $end_date ? date( 'Y-m-d', strtotime( $end_date ) ) : '';
-$end_time_value   = $end_date ? date( 'H:i', strtotime( $end_date ) ) : '23:59';
+$start_date_value = $start_date ? gmdate( 'Y-m-d', strtotime( $start_date ) ) : '';
+$start_time_value = $start_date ? gmdate( 'H:i', strtotime( $start_date ) ) : '00:00';
+$end_date_value   = $end_date ? gmdate( 'Y-m-d', strtotime( $end_date ) ) : '';
+$end_time_value   = $end_date ? gmdate( 'H:i', strtotime( $end_date ) ) : '23:59';
 ?>
 
 <div class="festival-banner-meta-box">

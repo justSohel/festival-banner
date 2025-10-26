@@ -2,7 +2,6 @@
 /**
  * Banner display functionality
  *
- * @link       https://example.com
  * @since      1.0.0
  *
  * @package    Festival_Banner
@@ -16,7 +15,7 @@
  *
  * @package    Festival_Banner
  * @subpackage Festival_Banner/public
- * @author     Your Name <email@example.com>
+ * @author     justSohel <thesohelrana.me@gmail.com>
  */
 class Festival_Banner_Display {
 
@@ -126,6 +125,20 @@ class Festival_Banner_Display {
 		// Text color.
 		if ( ! empty( $banner->text_color ) ) {
 			$styles[] = 'color: ' . esc_attr( $banner->text_color );
+		}
+
+		// Floating position (add as inline style for better specificity).
+		if ( 'floating' === $banner->position ) {
+			$position_map = array(
+				'top_left'     => 'top: 20px; left: 20px;',
+				'top_right'    => 'top: 20px; right: 20px;',
+				'bottom_left'  => 'bottom: 20px; left: 20px;',
+				'bottom_right' => 'bottom: 20px; right: 20px;',
+			);
+			
+			if ( isset( $position_map[ $banner->floating_position ] ) ) {
+				$styles[] = $position_map[ $banner->floating_position ];
+			}
 		}
 
 		return implode( '; ', $styles );

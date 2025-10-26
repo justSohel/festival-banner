@@ -221,7 +221,9 @@ $specific_pages    = is_array( $specific_pages ) ? $specific_pages : array();
 				echo '<div style="max-height: 200px; overflow-y: auto; margin-top: 10px; border: 1px solid #ddd; padding: 10px; background: white;">';
 				foreach ( $pages as $page ) {
 					$checked = in_array( $page->ID, $specific_pages, true ) ? 'checked' : '';
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					echo '<label style="display: block; margin-bottom: 5px;">';
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					echo '<input type="checkbox" name="fb_specific_pages[]" value="' . esc_attr( $page->ID ) . '" ' . $checked . '> ';
 					echo esc_html( $page->post_title );
 					echo '</label>';

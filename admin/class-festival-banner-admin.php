@@ -2,7 +2,6 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://example.com
  * @since      1.0.0
  *
  * @package    Festival_Banner
@@ -17,7 +16,7 @@
  *
  * @package    Festival_Banner
  * @subpackage Festival_Banner/admin
- * @author     Your Name <email@example.com>
+ * @author     justSohel <thesohelrana.me@gmail.com>
  */
 class Festival_Banner_Admin {
 
@@ -381,8 +380,13 @@ class Festival_Banner_Admin {
 		$changed = absint( $_GET['changed'] );
 
 		$messages = array(
+			/* translators: 1: banner activated, 2: banners activated. */
 			'activated'   => _n( '%d banner activated.', '%d banners activated.', $changed, 'festival-banner' ),
+
+			/* translators: 1: banner deactivated, 2: banners deactivated. */
 			'deactivated' => _n( '%d banner deactivated.', '%d banners deactivated.', $changed, 'festival-banner' ),
+
+			/* translators: 1: banner duplicated, 2: banners duplicated. */
 			'duplicated'  => _n( '%d banner duplicated.', '%d banners duplicated.', $changed, 'festival-banner' ),
 		);
 

@@ -10,7 +10,8 @@
    ========================================================================== */
 
 .fb-banner {
-	position: relative;
+	/* position: relative; */
+	/* position: fixed; */
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	line-height: 1.6;
@@ -118,15 +119,15 @@
    Top Bar Position
    ========================================================================== */
 
-.fb-banner--top-bar {
-	position: static;
+.fb-banner--top_bar {
+	position: fixed;
 	width: 100%;
 	left: 0;
 	top: 0;
 	transition: all 0.3s ease;
 }
 
-.fb-banner--top-bar.fb-sticky {
+.fb-banner--top_bar.fb-sticky {
 	position: fixed;
 	top: 0;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -146,8 +147,8 @@
    Bottom Bar Position
    ========================================================================== */
 
-.fb-banner--bottom-bar {
-	position: fixed;
+.fb-banner--bottom_bar {
+	position: relative;
 	width: 100%;
 	left: 0;
 	bottom: 0;
@@ -155,7 +156,7 @@
 	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.fb-banner--bottom-bar.fb-push-content {
+.fb-banner--bottom_bar.fb-push-content {
 	position: relative;
 }
 
@@ -168,7 +169,7 @@
 	max-width: 350px;
 	border-radius: 8px;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-	z-index: 9997;
+	z-index: 99999;
 	padding: 15px;
 }
 
@@ -191,23 +192,23 @@
 
 /* Floating positions */
 .fb-banner--floating-top-left {
-	top: 20px;
-	left: 20px;
+	top: 10px;
+	left: 10px;
 }
 
 .fb-banner--floating-top-right {
-	top: 20px;
-	right: 20px;
+	top: 10px;
+	right: 10px;
 }
 
 .fb-banner--floating-bottom-left {
-	bottom: 20px;
-	left: 20px;
+	bottom: 10px;
+	left: 10px;
 }
 
 .fb-banner--floating-bottom-right {
-	bottom: 20px;
-	right: 20px;
+	bottom: 10px;
+	right: 10px;
 }
 
 /* ==========================================================================
@@ -348,11 +349,11 @@
 }
 
 /* Slide Animation */
-.fb-banner--slide.fb-banner--top-bar {
+.fb-banner--slide.fb-banner--top_bar {
 	animation: slideInFromTop 0.5s ease;
 }
 
-.fb-banner--slide.fb-banner--bottom-bar {
+.fb-banner--slide.fb-banner--bottom_bar {
 	animation: slideInFromBottom 0.5s ease;
 }
 
@@ -457,8 +458,8 @@
 		gap: 15px;
 	}
 
-	.fb-banner--top-bar .fb-banner__container,
-	.fb-banner--bottom-bar .fb-banner__container {
+	.fb-banner--top_bar .fb-banner__container,
+	.fb-banner--bottom_bar .fb-banner__container {
 		flex-direction: column;
 		align-items: stretch;
 	}
@@ -549,7 +550,7 @@
 .fb-banner__cta:focus,
 .fb-banner__dismiss:focus,
 .fb-banner__close:focus {
-	outline: 2px solid #0073aa;
+	outline: 2px solid #ffffff;
 	outline-offset: 2px;
 }
 

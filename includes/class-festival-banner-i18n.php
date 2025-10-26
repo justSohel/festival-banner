@@ -5,7 +5,6 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       https://example.com
  * @since      1.0.0
  *
  * @package    Festival_Banner
@@ -21,7 +20,7 @@
  * @since      1.0.0
  * @package    Festival_Banner
  * @subpackage Festival_Banner/includes
- * @author     Your Name <email@example.com>
+ * @author     justSohel <thesohelrana.me@gmail.com>
  */
 class Festival_Banner_i18n {
 
@@ -30,11 +29,11 @@ class Festival_Banner_i18n {
 	 *
 	 * @since 1.0.0
 	 */
-	public function load_plugin_textdomain() {
-		load_plugin_textdomain(
-			'festival-banner',
-			false,
-			dirname( FESTIVAL_BANNER_PLUGIN_BASENAME ) . '/languages/'
-		);
-	}
+	// public function load_plugin_textdomain() {
+	// 	load_plugin_textdomain(
+	// 		'festival-banner',
+	// 		false,
+	// 		dirname( FESTIVAL_BANNER_PLUGIN_BASENAME ) . '/languages/'
+	// 	);
+	// }
 }

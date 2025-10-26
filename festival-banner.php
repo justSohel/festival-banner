@@ -1,25 +1,29 @@
 <?php
 /**
- * Festival Banner
+ * The plugin bootstrap file
  *
+ * This file is read by WordPress to generate the plugin information in the plugin
+ * admin area. This file also includes all of the dependencies used by the plugin,
+ * registers the activation and deactivation functions, and defines a function
+ * that starts the plugin.
+ *
+ * @link              https://github.com/justSohel/
+ * @since             1.0.0
  * @package           Festival_Banner
- * @author            Your Name
- * @copyright         2024 Your Name
- * @license           GPL-2.0-or-later
  *
  * @wordpress-plugin
- * Plugin Name:       Festival Banner (DEV Claude)
- * Plugin URI:        https://example.com/festival-banner
- * Description:       Create eye-catching festival banners for e-commerce sales campaigns with multiple positions and advanced scheduling.
+ * Plugin Name:       Festival Banner
+ * Plugin URI:        https://github.com/justSohel/festival-banner
+ * Description:       Create eye-catching festival banners for sales campaigns with multiple positions and advanced scheduling.
  * Version:           1.0.0
- * Requires at least: 5.8
- * Requires PHP:      7.4
- * Author:            Your Name
- * Author URI:        https://example.com
+ * Author:            justSohel
+ * Author URI:        https://github.com/justSohel/
+ * License:           GPL-2.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       festival-banner
  * Domain Path:       /languages
- * License:           GPL v2 or later
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Requires PHP:	  7.4
+ * Requires at least: 5.6
  */
 
 // If this file is called directly, abort.
