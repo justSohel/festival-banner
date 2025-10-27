@@ -15,7 +15,7 @@
  * Plugin Name:       Festival Banner
  * Plugin URI:        https://github.com/justSohel/festival-banner
  * Description:       Create eye-catching festival banners for sales campaigns with multiple positions and advanced scheduling.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            justSohel
  * Author URI:        https://github.com/justSohel/
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
  */
-define( 'FESTIVAL_BANNER_VERSION', '1.0.0' );
+define( 'FESTIVAL_BANNER_VERSION', '1.1.0' );
 
 /**
  * Plugin file path.
