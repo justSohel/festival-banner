@@ -76,6 +76,7 @@ class Festival_Banner_Query {
 		$banners = self::filter_by_position( $banners );
 
 		// Cache for 1 hour.
+		// set_transient( $cache_key, $banners, HOUR_IN_SECONDS );
 		set_transient( $cache_key, $banners, HOUR_IN_SECONDS );
 
 		return $banners;
