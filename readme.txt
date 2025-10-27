@@ -69,14 +69,13 @@ Absolutely. You can set start and end dates for any banner.
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial release with customizable banner options, scheduling, and responsive layout.
-
 = 1.1.0 (Date: Oct 27, 2025) =
 * Clear cache when uninstall
 * Remove all data when delete plugin
 * Fix: Default dismissable behavior
 
+= 1.0.0 =
+* Initial release with customizable banner options, scheduling, and responsive layout.
 
 == Upgrade Notice ==
 
