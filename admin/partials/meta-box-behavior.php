@@ -17,9 +17,9 @@ $is_dismissible = get_post_meta( $post->ID, '_fb_is_dismissible', true );
 $position       = get_post_meta( $post->ID, '_fb_position', true );
 
 // Default to true.
-if ( '' === $is_dismissible ) {
-	$is_dismissible = true;
-}
+// if ( '' === $is_dismissible ) {
+// 	$is_dismissible = true;
+// }
 
 // Check if modal (always dismissible).
 $is_modal = ( 'modal' === $position );

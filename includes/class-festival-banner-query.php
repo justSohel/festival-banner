@@ -133,7 +133,7 @@ class Festival_Banner_Query {
 		$banner->text_color        = $banner->text_color ? $banner->text_color : '#ffffff';
 		$banner->cta_bg_color      = $banner->cta_bg_color ? $banner->cta_bg_color : '#ffffff';
 		$banner->cta_text_color    = $banner->cta_text_color ? $banner->cta_text_color : '#000000';
-		$banner->is_dismissible    = ( '' === $banner->is_dismissible ) ? true : $banner->is_dismissible;
+		// $banner->is_dismissible    = ( '' === $banner->is_dismissible ) ? true : $banner->is_dismissible;
 
 		return $banner;
 	}
